@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="38205f53-2e25-4a00-aedc-1c806b08cc0f" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2JMlQ8dfc8Gytwbjqj6HGdgcRPn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Randall.Brooks/Documents/A_STS/Dev/intellij/MagicDraw development/plugins/My Plug-in 1/src/action",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.tools"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Randall.Brooks\Documents\A_STS\Dev\intellij\MagicDraw development\plugins\My Plug-in 1\src\action" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MagicDraw with all plugins">
+    <list>
+      <item itemvalue="Application.MagicDraw with all plugins" />
+      <item itemvalue="Application.MyCommandline" />
+      <item itemvalue="JUnit.JUnit3Test" />
+      <item itemvalue="JUnit.JUnit4Test" />
+      <item itemvalue="JUnit.JUnit5Test" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="38205f53-2e25-4a00-aedc-1c806b08cc0f" name="Changes" comment="" />
+      <created>1671895831847</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1671895831847</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.nomagic.esi.core.msg.info.impl.EObjectDataImpl" memberName="containerFeatureID" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>
