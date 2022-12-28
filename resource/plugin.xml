@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+        id="stsllc1"
+        name="ModelDriven Plugin"
+        version="1.0"
+        provider-name="stsllc.tech"
+        class="tech.stsllc">
+
+    <requires>
+        <api version="1.2"/>
+    </requires>
+
+    <runtime>
+        <library name="GTX.jar"/>
+    </runtime>
+</plugin>
