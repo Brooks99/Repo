@@ -16,6 +16,7 @@ public class MyPlugin1 extends Plugin {
 		//String property = System.getProperty("java.class.path");
 		//OutMsg.disp(property);
 		OutMsg.disp("Cameo Product is " + LicenseUtils.getEdition());
+
 		createMainMenuAction();
 		createBrowserAction();
 		createDiagramAction();

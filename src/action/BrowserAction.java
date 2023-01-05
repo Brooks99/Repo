@@ -42,6 +42,9 @@ public class BrowserAction extends DefaultBrowserAction {
 
                 var modelDiagramGenerator = new ModelDiagramGenerator();
                 modelDiagramGenerator.execute(parentPackage);
+
+
+
             }
         }
 

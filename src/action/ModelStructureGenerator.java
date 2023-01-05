@@ -30,6 +30,7 @@ public class ModelStructureGenerator {
 
     public void execute(Package parentPackage) {
         try {
+
             SessionManager.getInstance().createSession(project, "Creating model elements");
 
             //createModelElements(parentPackage);
@@ -39,7 +40,7 @@ public class ModelStructureGenerator {
 
         } catch (Exception e) {
             e.printStackTrace();
-            Application.getInstance().getGUILog().showMessage("Exception occured: " + e.getMessage());
+            Application.getInstance().getGUILog().showMessage("Exception occurred: " + e.getMessage());
             SessionManager.getInstance().cancelSession(project);
         }
     }
@@ -63,44 +64,47 @@ public class ModelStructureGenerator {
         createRelation(parentPackage, firstClass, secondClass);
     }
 
-    private InstanceSpecification createInstanceSpecification(Package parentPackage) throws ReadOnlyElementException {
+    private void createInstanceSpecification(Package parentPackage) throws ReadOnlyElementException {
 
         InstanceSpecification mdInstanceSpecification = null;
 
-        for (SqlRecord sr : SqlRecords.getRecords()) {
+        var max = SqlRecords.getRecords().size();
 
-            // Create an instance of a class
-            mdInstanceSpecification = factory.createInstanceSpecificationInstance();
+        ProgressStatusSample.nonLockedExecution(project,max,factory, parentPackage, manager);
 
-            mdInstanceSpecification.setVisibility(VisibilityKindEnum.getByName("public"));
-
-            mdInstanceSpecification.setOwner(parentPackage);
-
-            // Add the name for the part from the db.
-            mdInstanceSpecification.setName(sr.getpName());
-
-            OutMsg.disp(mdInstanceSpecification.getHumanName() + " Test ");
-
-            // Add the Type property
-            addInstanceProperty(mdInstanceSpecification);
-
-            // set slot values
-            setSlotValue(mdInstanceSpecification, sr.getpID(), sr.getMax1(), sr.getMin1());
-
-            manager.addElement(mdInstanceSpecification, parentPackage);
-        }
-        return mdInstanceSpecification;
+//        for (SqlRecord sr : SqlRecords.getRecords()) {
+//
+//            // Create an instance of a class
+//            mdInstanceSpecification = factory.createInstanceSpecificationInstance();
+//
+//            mdInstanceSpecification.setVisibility(VisibilityKindEnum.getByName("public"));
+//
+//            mdInstanceSpecification.setOwner(parentPackage);
+//
+//            // Add the name for the part from the db.
+//            mdInstanceSpecification.setName(sr.getpName());
+//
+//            OutMsg.disp(mdInstanceSpecification.getHumanName() + " Test ");
+//
+//            // Add the Type property
+//            addInstanceProperty(mdInstanceSpecification);
+//
+//            // set slot values
+//            setSlotValue(mdInstanceSpecification, sr.getpID(), sr.getMax1(), sr.getMin1());
+//
+//            manager.addElement(mdInstanceSpecification, parentPackage);
+//        }
+//        //return mdInstanceSpecification;
     }
 
 
     private void addInstanceProperty(InstanceSpecification mdIs) throws ReadOnlyElementException {
 
-
         var ele1 = (Classifier) Finder.byQualifiedName()
                 .find(project, "08. Work Area::Part Class::Non Volatile Memory Part Class");
 
         mdIs.getClassifier().add(ele1);
-        //ModelHelper.setSlotValue();
+
         ModelHelper.createSlotsForDefaultValues(mdIs, ele1, true);
     }
 

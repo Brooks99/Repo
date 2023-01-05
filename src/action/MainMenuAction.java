@@ -24,6 +24,7 @@ public class MainMenuAction extends MDAction {
         PartQuery partQuery = new PartQuery();
 
         try {
+            
             partQuery.viewResult(con);
         } catch (SQLException e) {
             throw new RuntimeException(e);
